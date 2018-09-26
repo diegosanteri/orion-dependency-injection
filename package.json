@@ -4,6 +4,9 @@
   "description": "",
   "author": "Diego Conti Santeri Tonini <diegosanteri@gmail.com>",
   "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
   "keywords": [
     "nodejs",
     "di",
@@ -19,5 +22,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/diegosanteri/orion-dependency-injection"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
   }
 }
