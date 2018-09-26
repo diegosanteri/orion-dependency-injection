@@ -1,6 +1,6 @@
 {
   "name": "orion-dependency-injection",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "author": "Diego Conti Santeri Tonini <diegosanteri@gmail.com>",
   "main": "lib/index.js",
