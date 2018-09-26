@@ -1,0 +1,14 @@
+{
+    "dependencies": [
+        {
+            "name": "UserModel",
+            "path": "test/src/model/userModel",
+            "dependencies": []
+        },
+        {
+            "name": "RoleModel",
+            "path": "test/src/model/roleModel",
+            "dependencies": []
+        }
+    ]
+}
