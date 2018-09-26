@@ -1,6 +1,6 @@
-# di-js
+# orion-dependency-injection
 
-## What's di-js?
+## What's orion-dependency-injection?
 
 It's a lib to work with dependency injection in nodejs, it's very powerfull and flexible.
 
