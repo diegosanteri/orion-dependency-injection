@@ -1,5 +1,5 @@
 {
-  "name": "di",
+  "name": "orion-dependency-injection",
   "version": "1.0.0",
   "description": "",
   "author": "Diego Conti Santeri Tonini <diegosanteri@gmail.com>",
@@ -8,7 +8,8 @@
     "nodejs",
     "di",
     "Dependency Injection",
-    "Javascript DI"
+    "Javascript DI",
+    "orion"
   ],
   "license": "MTI",
   "dependencies": {
@@ -17,6 +18,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/diegosanteri/di-js"
+    "url": "https://github.com/diegosanteri/orion-dependency-injection"
   }
 }
