@@ -2,17 +2,21 @@
   "name": "di",
   "version": "1.0.0",
   "description": "",
+  "author": "Diego Conti Santeri Tonini <diegosanteri@gmail.com>",
   "main": "lib/index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "nodejs",
+    "di",
+    "Dependency Injection",
+    "Javascript DI"
+  ],
+  "license": "MTI",
   "dependencies": {
     "app-root-path": "^2.1.0",
     "dependency-graph": "^0.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegosanteri/di-js"
   }
 }
