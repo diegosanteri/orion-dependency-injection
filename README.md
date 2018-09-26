@@ -1,27 +1,27 @@
-# di-js
+# orion-dependency-injection
 
-## What's di-js?
+## What's orion-dependency-injection?
 
 It's a lib to work with dependency injection in nodejs, it's very powerfull and flexible.
 
 ## Install
 
 ```sh
-npm install --save di-js
+npm install --save orion-dependency-injection
 
 ```
 ## Usage
 
-Add di-js in project
+Add orion-dependency-injection in project
 
 //server.js
 ```sh
-var dijs = require('di-js');
+var dijs = require('orion-dependency-injection');
 dijs.init('/src/test/bootstrap/dependency.json');
 ```
 
 //service.js
 ```sh
-var dijs = require('di-js');
+var dijs = require('orion-dependency-injection');
 const userService = dijs.getDependency('UserService');
 ```
