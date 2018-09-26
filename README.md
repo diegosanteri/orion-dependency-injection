@@ -12,7 +12,7 @@ npm install --save di-js
 ```
 ## Usage
 
-Add di-js in project
+Add orion-dependency-injection in project
 
 //server.js
 ```sh
