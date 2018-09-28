@@ -2,11 +2,11 @@
     "dependencies": [
         {
             "name": "UserController",
-            "path": "test/src/controller/userController",
+            "path": "/test/src/controller/userController",
             "dependencies": [
                 {
                     "name": "UserService",
-                    "path": "test/src/service/userService"
+                    "path": "/test/src/service/userService"
                 }
             ]
         }

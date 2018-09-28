@@ -2,21 +2,21 @@
     "dependencies": [
         {
             "name": "UserRepository",
-            "path": "test/src/repository/userRepository",
+            "path": "/test/src/repository/userRepository",
             "dependencies": [
                 {
                     "name": "UserModel",
-                    "path": "test/src/model/userModel"
+                    "path": "/test/src/model/userModel"
                 }
             ]
         },
         {
             "name": "PermissionRepository",
-            "path": "test/src/repository/permissionRepository",
+            "path": "/test/src/repository/permissionRepository",
             "dependencies": [
                 {
                     "name": "RoleModel",
-                    "path": "test/src/model/roleModel"
+                    "path": "/test/src/model/roleModel"
                 }
             ]
         }

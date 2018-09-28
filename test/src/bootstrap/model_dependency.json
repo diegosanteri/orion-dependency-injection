@@ -2,12 +2,12 @@
     "dependencies": [
         {
             "name": "UserModel",
-            "path": "test/src/model/userModel",
+            "path": "/test/src/model/userModel",
             "dependencies": []
         },
         {
             "name": "RoleModel",
-            "path": "test/src/model/roleModel",
+            "path": "/test/src/model/roleModel",
             "dependencies": []
         }
     ]

@@ -2,15 +2,15 @@
     "dependencies": [
         {
             "name": "UserService",
-            "path": "test/src/service/userService",
+            "path": "/test/src/service/userService",
             "dependencies": [
                 {
                     "name": "UserRepository",
-                    "path": "test/src/repository/userRepository"
+                    "path": "/test/src/repository/userRepository"
                 },
                 {
                     "name": "PermissionRepository",
-                    "path": "test/src/repository/permissionRepository"
+                    "path": "/test/src/repository/permissionRepository"
                 }
             ]
         }
