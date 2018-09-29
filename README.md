@@ -25,3 +25,12 @@ dijs.init('/src/test/bootstrap/dependency.json');
 var dijs = require('orion-dependency-injection');
 const userService = dijs.getDependency('UserService');
 ```
+
+
+### Express integration
+We can use this lib with Express just following this:
+```sh
+app.use(orionDI.init('/src/bootstrap/dependencies.json', {routes}));
+```
+
+You can see a complete integration here: https://github.com/diegosanteri/orion-dependency-example
