@@ -1,4 +1,5 @@
 {
+    "externals": ["orion-di-lib-example"],
     "imports": ["/test/src/bootstrap/model", "/test/src/bootstrap/repository", 
         "/test/src/bootstrap/service", "/test/src/bootstrap/controller"],
     "dependencies": [
