@@ -3,16 +3,7 @@
         {
             "name": "UserService",
             "path": "/test/src/service/userService",
-            "dependencies": [
-                {
-                    "name": "UserRepository",
-                    "path": "/test/src/repository/userRepository"
-                },
-                {
-                    "name": "PermissionRepository",
-                    "path": "/test/src/repository/permissionRepository"
-                }
-            ]
+            "dependencies": ["UserRepository", "PermissionRepository"]
         }
     ]
 }

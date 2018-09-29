@@ -4,14 +4,7 @@
         {
             "name": "OtherService",
             "path": "/test/src/service/otherService",
-            "dependencies": [{
-                "name": "UserModel",
-                "path": "/test/src/model/userModel",
-                "dependencies": []
-            }, {
-                "name": "PermissionRepository",
-                "path": "/test/src/repository/PermissionRepository"
-            }]
+            "dependencies": ["UserModel", "PermissionRepository"]
         }
     ]
 }

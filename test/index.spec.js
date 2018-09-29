@@ -5,6 +5,7 @@ describe('Testing lib dependencies load', () => {
     it('should load all dependencies', (done) => {
 
         index.loadDependencies('/test/src/bootstrap/dependencies.json').then((instances) => {
+            console.log(instances);
             expect(instances.UserModel.constructor.name).toBe('UserModel');
             expect(instances.RoleModel.constructor.name).toBe('RoleModel');
             expect(instances.UserRepository.constructor.name).toBe('UserRepository');
