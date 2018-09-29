@@ -45,3 +45,5 @@ app.use(orionDI.init('/src/bootstrap/dependencies.json', {routes}));
 ```
 
 You can see a complete integration here: https://github.com/diegosanteri/orion-dependency-example
+
+Join us and help to improve this project =D
