@@ -1,11 +1,12 @@
 {
+    "externals": ["orion-di-lib-test"],
     "imports": ["/test/src/bootstrap/model", "/test/src/bootstrap/repository", 
         "/test/src/bootstrap/service", "/test/src/bootstrap/controller"],
     "dependencies": [
         {
             "name": "OtherService",
             "path": "/test/src/service/otherService",
-            "dependencies": ["UserModel", "PermissionRepository"]
+            "dependencies": ["UserModel", "PermissionRepository", "OrionDiLibExample"]
         }
     ]
 }

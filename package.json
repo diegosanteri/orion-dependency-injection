@@ -1,6 +1,6 @@
 {
   "name": "orion-dependency-injection",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "author": "Diego Conti Santeri Tonini <diegosanteri@gmail.com>",
   "main": "lib/index.js",
@@ -17,7 +17,8 @@
   "license": "MTI",
   "dependencies": {
     "app-root-path": "^2.1.0",
-    "dependency-graph": "^0.7.2"
+    "dependency-graph": "^0.7.2",
+    "rsyncwrapper": "^3.0.1"
   },
   "repository": {
     "type": "git",

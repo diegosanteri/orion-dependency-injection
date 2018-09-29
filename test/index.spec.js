@@ -1,6 +1,21 @@
+const rsync = require('rsyncwrapper');
 const index = require('../lib/index');
 
 describe('Testing lib dependencies load', () => {
+    beforeAll(done => {
+        rsync({
+            src: "test/orion-di-lib-test",
+            dest: "node_modules",
+            recursive: true
+        },
+        function(error, stdout, stderr, cmd) {
+          if (error) {
+            console.log(error, stdout, stderr, cmd)
+          } else {
+              done();
+          }
+        });
+    });
 
     it('should load all dependencies', (done) => {
 
@@ -12,6 +27,7 @@ describe('Testing lib dependencies load', () => {
             expect(instances.UserService.constructor.name).toBe('UserService');
             expect(instances.UserController.constructor.name).toBe('UserController');
             expect(instances.OtherService.constructor.name).toBe('OtherService');
+            expect(instances.OrionDiLibExample.constructor.name).toBe('OrionDiLibExample');
 
             done();
         });
