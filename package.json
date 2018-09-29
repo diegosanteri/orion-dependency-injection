@@ -17,8 +17,7 @@
   "license": "MTI",
   "dependencies": {
     "app-root-path": "^2.1.0",
-    "dependency-graph": "^0.7.2",
-    "orion-di-lib-example": "https://github.com/diegosanteri/orion-di-lib-example/tarball/master"
+    "dependency-graph": "^0.7.2"
   },
   "repository": {
     "type": "git",
