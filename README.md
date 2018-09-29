@@ -12,6 +12,9 @@ npm install --save orion-dependency-injection
 ```
 ## Usage
 
+### Initial configuration
+Orion Dependency Injection expect a file called @dependency.json in application root
+
 Add orion-dependency-injection in project
 
 //server.js
@@ -25,7 +28,15 @@ dijs.init('/src/test/bootstrap/dependency.json');
 var dijs = require('orion-dependency-injection');
 const userService = dijs.getDependency('UserService');
 ```
+### Importing externals libs with orion-di
 
+//@dependency.json
+```sh{
+    "externals": ["orion-di-lib-test"],
+    "imports": [...],
+    "dependencies": [...]
+}
+```
 
 ### Express integration
 We can use this lib with Express just following this:
