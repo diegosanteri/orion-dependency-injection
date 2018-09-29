@@ -1,10 +1,10 @@
 const index = require('../lib/index');
 
-describe('Testing lib dependencies load', ()=>{
+describe('Testing lib dependencies load', () => {
 
-    it('should load all dependencies', (done)=>{
+    it('should load all dependencies', (done) => {
 
-        index.init('/test/src/bootstrap/dependencies.json').then((instances) => {
+        index.loadDependencies('/test/src/bootstrap/dependencies.json').then((instances) => {
             expect(instances.UserModel.constructor.name).toBe('UserModel');
             expect(instances.RoleModel.constructor.name).toBe('RoleModel');
             expect(instances.UserRepository.constructor.name).toBe('UserRepository');
@@ -17,9 +17,8 @@ describe('Testing lib dependencies load', ()=>{
         });
     })
 
-    it('should get dependency by name', (done)=>{
-
-        index.init('/test/src/bootstrap/dependencies.json').then(instances => {
+    it('should get dependency by name', (done) => {
+        index.loadDependencies('/test/src/bootstrap/dependencies.json').then(instances => {
             expect(index.getDependency('UserModel')).not.toBe(undefined);
             done();
         });
