@@ -4,7 +4,7 @@ describe('Testing lib dependencies load', () => {
 
     it('should load all dependencies', (done) => {
 
-        index.loadDependencies('/test/src/bootstrap/dependencies.json').then((instances) => {
+        index.loadDependencies().then((instances) => {
             expect(instances.UserModel.constructor.name).toBe('UserModel');
             expect(instances.RoleModel.constructor.name).toBe('RoleModel');
             expect(instances.UserRepository.constructor.name).toBe('UserRepository');
@@ -18,7 +18,7 @@ describe('Testing lib dependencies load', () => {
     })
 
     it('should get dependency by name', (done) => {
-        index.loadDependencies('/test/src/bootstrap/dependencies.json').then(instances => {
+        index.loadDependencies().then(instances => {
             expect(index.getDependency('UserModel')).not.toBe(undefined);
             done();
         });
