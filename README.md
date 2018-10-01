@@ -20,7 +20,7 @@ Add orion-dependency-injection in project
 //server.js
 ```sh
 var dijs = require('orion-dependency-injection');
-dijs.init('/src/test/bootstrap/dependency.json');
+dijs.init();
 ```
 
 //service.js
@@ -41,7 +41,7 @@ const userService = dijs.getDependency('UserService');
 ### Express integration
 We can use this lib with Express just following this:
 ```sh
-app.use(orionDI.init('/src/bootstrap/dependencies.json', {routes}));
+app.use(orionDI.init({routes}));
 ```
 
 You can see a complete integration here: https://github.com/diegosanteri/orion-dependency-example
