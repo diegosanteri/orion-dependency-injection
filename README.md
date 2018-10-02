@@ -51,37 +51,85 @@ We highly recommend you to import your externals dependencies inside this root f
 
 ### imports section
 
+Think about a giant project with alot of dependencies. In this case your @dependencies.json file will be with many dependencies and hard to read. To split it and solve this problem, orion-dependency-injection has this section. There you can import another config files and keep these files small, doing that your project will be more easy to maintain.
+This another files will look like as your main file @dependencies.json.
+how it works?
 
-
-Add orion-dependency-injection in project
-
-//server.js
 ```sh
-var dijs = require('orion-dependency-injection');
-dijs.init();
+"imports": ["/test/src/bootstrap/model", "/test/src/bootstrap/repository", 
+        "/test/src/bootstrap/service", "/test/src/bootstrap/controller"],
 ```
 
-//service.js
+So, you will put the relative path for your dependencies, int this case inside folder bootstrap you will have files called
+model_dependency.json, repository_dependency.json, service_dependency.json and controller_dependency.json. 
+Notice: You put for example '/test/src/bootstrap/model' as an import, automatically orion-dependency-injection will be put  _dependency.json in the end of file name, don't put your file as "imports": ["/test/src/bootstrap/model_dependency.json"]
+
+
+### dependencies section
+
+This section you will put yours dependencies, it's so easy.
+
 ```sh
-var dijs = require('orion-dependency-injection');
-const userService = dijs.getDependency('UserService');
+"dependencies": [
+        {
+            "name": "otherService",
+            "path": "/test/src/service/otherService",
+            "dependencies": ["userModel"]
+        },
+        {
+            "name": "userModel",
+            "isModule": true,
+            "path": "/test/src/model/userModel",
+            "dependencies": []
+        }
+    ]
 ```
-### Importing externals libs with orion-di
 
-//@dependency.json
-```sh{
-    "externals": ["orion-di-lib-test"],
-    "imports": [...],
-    "dependencies": [...]
-}
-```
+First off all, when you have a service you will need to inform three params: 
+name: This param define the dependency name, it's the reference for your dependency
+path: Path is the relative path for your dependency file, notice: don't put .js, it will be put automatically
+dependencies: It's an array of string, here you will put the dependency's names, what it mean? The dependencies of dependency you are defining at moment. For exemple,  otherService depends of userModel to be instantiate.
 
-### Express integration
-We can use this lib with Express just following this:
+As a good practice we recommend you put in the import files just the section dependency, if this specific file grows more than you expect you can break it in another imports files.
+
+### orion-dependency-injection as express middleware
+
+To add this lib in your express server you will need just do it:
+
 ```sh
 app.use(orionDI.init({routes}));
 ```
 
-You can see a complete integration here: https://github.com/diegosanteri/orion-dependency-example
+Doing this our lib will load all of dependencies then it will apply your routes logic, this routes file will looks like:
+
+```sh
+const orionDI = require('orion-dependency-injection');
+
+module.exports = (app) => {
+const controller = orionDI.getDependency('userController');
+app.get('/users', controller.getUsers.bind(controller))
+
+```
+
+Inside this file you will setup all of express routes, it will be your entry point for all of your dependencies,
+when you use orionDI variable it will be contains all of your dependencies instantiated and ready for use.
+
+### Using orion-dependency-injection stand alone
+
+```sh
+var dijs = require('orion-dependency-injection');
+orionDI.init().then(() => {
+    const userService = dijs.getDependency('UserService');
+    userService.getName();
+})
+```
+
+### Extras
+
+You can see a complete integration here: 
+https://github.com/diegosanteri/orion-dependency-example
+
+You can see how to create an lib using orion-dependency-lib here:
+https://github.com/diegosanteri/orion-di-lib-example
 
 Join us and help to improve this project =D
