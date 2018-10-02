@@ -1,5 +1,8 @@
 module.exports = class OrionDiLibExample {
-    constructor(libService) {
+    constructor({libService}) {
         this.libService = libService;
+    }
+    getName() {
+        return '#orionDiLibExample' + this.libService.getName();
     }
 }

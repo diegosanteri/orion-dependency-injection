@@ -1,5 +1,9 @@
 module.exports = class PermissionRepository {
-    constructor(roleModel) {
+    constructor({roleModel}) {
         this.roleModel = roleModel;
+    }
+
+    getName() {
+        return '#permissionRepository' + this.roleModel.getName();
     }
 }

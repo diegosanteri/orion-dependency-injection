@@ -1,9 +1,9 @@
 {
     "dependencies": [
         {
-            "name": "UserService",
+            "name": "userService",
             "path": "/test/src/service/userService",
-            "dependencies": ["UserRepository", "PermissionRepository"]
+            "dependencies": ["userRepository", "permissionRepository"]
         }
     ]
 }

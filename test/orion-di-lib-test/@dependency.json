@@ -1,17 +1,17 @@
 {
     "dependencies": [
         {
-            "name": "OrionDiLibExample",
+            "name": "orionDiLibExample",
             "path": "/src/index",
-            "dependencies": ["LibService"]
+            "dependencies": ["libService"]
         },
         {
-            "name": "LibService",
+            "name": "libService",
             "path": "/src/service/libService",
-            "dependencies": ["LibRepository"]
+            "dependencies": ["libRepository"]
         },
         {
-            "name": "LibRepository",
+            "name": "libRepository",
             "path": "/src/repository/libRepository",
             "dependencies": []
         }

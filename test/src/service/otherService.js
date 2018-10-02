@@ -1,7 +1,11 @@
 module.exports = class OtherService {
-    constructor(userModel, permissionRepository, libExampleEntryPoint) {
+    constructor({userModel, permissionRepository, orionDiLibExample}) {
         this.userModel = userModel;
         this.permissionRepository = permissionRepository;
-        this.libExampleEntryPoint = libExampleEntryPoint;
+        this.orionDiLibExample = orionDiLibExample;
+    }
+
+    getName() {
+        return '#otherService' + this.userModel.getName() + this.permissionRepository.getName() + this.orionDiLibExample.getName();
     }
 }
