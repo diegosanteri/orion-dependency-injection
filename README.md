@@ -84,7 +84,7 @@ name: This param defines the dependency name, it's the reference of your depende
 
 path: Path is the relative path for your dependency file, notice: don't use .js, it will be automatically added; 
 
-dependencies: It's an array of string, here you will write the dependency's names; it means the dependencies of the dependency being defined at the moment. For example, otherService depends on userModel to be instantiated.
+dependencies: this param is an array of string, where we will establish the names of the dependencies required by the first dependency being defined. For example: otherService depends on userModel to be instantiated.
 
 isModule: It's an optional parameters false by default. You must use this parameter when you want to instantiate for example the fs module from nodejs or mongoose models.
 
