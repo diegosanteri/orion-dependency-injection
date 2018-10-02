@@ -4,9 +4,9 @@
         "/test/src/bootstrap/service", "/test/src/bootstrap/controller"],
     "dependencies": [
         {
-            "name": "OtherService",
+            "name": "otherService",
             "path": "/test/src/service/otherService",
-            "dependencies": ["UserModel", "PermissionRepository", "OrionDiLibExample"]
+            "dependencies": ["userModel", "permissionRepository", "orionDiLibExample"]
         }
     ]
 }
